@@ -1,0 +1,17 @@
+<resources>
+
+    <style name="appTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="error_appearance" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:textColor">@color/colorRed</item>
+    </style>
+
+    <style name="normal_appearance" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+</resources>

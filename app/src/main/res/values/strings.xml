@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Credit Card Input Exercise</string>
+    <string name="submit_payment">SUBMIT PAYMENT</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="security_code">Security Code</string>
+    <string name="mm_yy">MM/YY</string>
+    <string name="card_number">Card number</string>
+    <string name="visa">Visa</string>
+    <string name="master">Master</string>
+    <string name="discover">Discover</string>
+    <string name="american">American</string>
+    <string name="ok">OK</string>
+    <string name="paymentSuccess">Payment Success</string>
+
+    //Blank Errors
+    <string name="cardNumberBlankError">Please enter card number</string>
+    <string name="expiryBlankError">Please enter expiry details</string>
+    <string name="securityCodeBlankError">Please enter security code</string>
+    <string name="fNameBlankError">Please enter first name</string>
+    <string name="lNameBlankError">Please enter last name</string>
+
+    //Other Errors
+    <string name="cardNumberDigitError">Please check the card number</string>
+    <string name="cardNumberError">Please enter valid card number</string>
+    <string name="cardNotSupportedError">Only Master, VISA, American and Discover card supported</string>
+    <string name="expiryFormatError">Expiry should be in MM/YY format</string>
+    <string name="cardExpiredError">This month is passed</string>
+    <string name="securityCodeLengthError">Please check the security number</string>
+    <string name="fNameStringError">Please check first name</string>
+    <string name="lNameStringError">Please check last name</string>
+</resources>

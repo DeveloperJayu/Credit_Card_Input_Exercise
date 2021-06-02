@@ -29,4 +29,17 @@
     <string name="securityCodeLengthError">Please check the security number</string>
     <string name="fNameStringError">Please check first name</string>
     <string name="lNameStringError">Please check last name</string>
+    <string name="about_app">About App</string>
+    <string name="imgbanner">imgBanner</string>
+    <string name="developed_by">Developed By :</string>
+    <string name="jayu">Jayu</string>
+    <string name="about_this_app">About This App</string>
+    <string name="about_me">About Me</string>
+    <string name="lets_connect">Lets Connect</string>
+    <string name="imggithub">imgGitHub</string>
+    <string name="imglinkedin">imgLinkedIn</string>
+    <string name="imggmail">imgGmail</string>
+    <string name="imgtwitter">imgTwitter</string>
+    <string name="imgInstagram">imgInstagram</string>
+    <string name="imgplaystore">imgPlayStore</string>
 </resources>

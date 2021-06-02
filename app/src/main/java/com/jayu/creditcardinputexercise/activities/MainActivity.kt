@@ -3,7 +3,10 @@
 package com.jayu.creditcardinputexercise.activities
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button
@@ -14,6 +17,7 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.jayu.creditcardinputexercise.R
 import com.jayu.creditcardinputexercise.utils.LuhnCheck
+import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -241,19 +245,25 @@ class MainActivity : AppCompatActivity() {
         tnlLName.setHintTextAppearance(R.style.normal_appearance)
     }
 
-    @SuppressLint("SimpleDateFormat")
+    @SuppressLint("SimpleDateFormat", "SetTextI18n")
     private fun checkExpiry(expiry: String): Boolean {
-        val array = expiry.split("/".toRegex()).toTypedArray()
-        val mm = array[0]
-        val yy = array[1]
-        val eDate = "$mm/$yy"
-        val myFormat = SimpleDateFormat("MM/yy")
-        val d = Date()
-        val today = myFormat.format(d.time)
-        val currentDate = myFormat.parse(today)
-        val expiryDate = myFormat.parse(eDate)
-        val difference =expiryDate!!.time - currentDate!!.time
-        return difference >= 0
+        try{
+            val array = expiry.split("/".toRegex()).toTypedArray()
+            val mm = array[0]
+            val yy = array[1]
+            val eDate = "$mm/$yy"
+            val myFormat = SimpleDateFormat("MM/yy")
+            val d = Date()
+            val today = myFormat.format(d.time)
+            val currentDate = myFormat.parse(today)
+            val expiryDate = myFormat.parse(eDate)
+            val difference =expiryDate!!.time - currentDate!!.time
+            return difference >= 0
+        }
+        catch (e: Exception){
+            txtExpiryError.text = "Please enter valid date"
+            return false
+        }
     }
 
     private fun checkCVV(cardType: String, cvv: String): Boolean {
@@ -304,5 +314,18 @@ class MainActivity : AppCompatActivity() {
             else -> false
         }
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_items,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menuAboutApp){
+            val intent = Intent(this,AboutAppActivity::class.java)
+            startActivity(intent)
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
